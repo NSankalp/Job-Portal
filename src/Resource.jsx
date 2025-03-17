@@ -21,7 +21,7 @@ import Os from "./Os";
 import Networking from "./Networking";
 import COA from "./Coa";
 import SoftwareDev from "./Software";
-import dbms from "./Dbms";
+import dbms from "./dbms";
 import CompilerDesign from "./Compiler";
 
 const Resource = () => {
