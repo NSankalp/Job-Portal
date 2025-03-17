@@ -1,6 +1,5 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import jobsData from "../data/jobs.json";
 import "./JobDetails.css";
 
 const JobDetails = () => {
@@ -16,19 +15,31 @@ const JobDetails = () => {
   return (
     <div className="job-details">
       <h2>{job.title}</h2>
-      <p><strong>Company:</strong> {job.company}</p>
-      <p><strong>Location:</strong> {job.location}</p>
-      <p><strong>Salary:</strong> {job.salary}</p>
-      <p><strong>Description:</strong> {job.description}</p>
+      <p>
+        <strong>Company:</strong> {job.company}
+      </p>
+      <p>
+        <strong>Location:</strong> {job.location}
+      </p>
+      <p>
+        <strong>Salary:</strong> {job.salary}
+      </p>
+      <p>
+        <strong>Description:</strong> {job.description}
+      </p>
 
-      <p><strong>Qualifications:</strong></p>
+      <p>
+        <strong>Qualifications:</strong>
+      </p>
       <ul>
         {job.qualifications.map((qualification, index) => (
           <li key={index}>{qualification}</li>
         ))}
       </ul>
 
-      <p><strong>About the Company:</strong></p>
+      <p>
+        <strong>About the Company:</strong>
+      </p>
       <p>{job.aboutCompany}</p>
 
       <button>Apply Now</button>
