@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
 
 function Signup() {
-  const navigate = useNavigate(); // Initialize navigate
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -30,7 +30,7 @@ function Signup() {
             username: formData.name,
             password: formData.password,
             email: formData.email,
-            captchaToken, //send captcha token
+            captchaToken,
           }),
         }
       );
@@ -44,7 +44,7 @@ function Signup() {
 
       if (response.ok) {
         alert("Signup successful!");
-        navigate("/login"); // Redirect after signup
+        navigate("/login");
       } else {
         console.error(data.error || "Signup failed.");
       }
@@ -73,6 +73,7 @@ function Signup() {
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 400px;
+            text-align: center;
           }
           .form input {
             width: 100%;
@@ -100,6 +101,16 @@ function Signup() {
             font-weight: bold;
             margin-bottom: 20px;
             color: #333;
+          }
+          .redirect-link {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #6200ea;
+            cursor: pointer;
+            text-decoration: underline;
+          }
+          .redirect-link:hover {
+            color: #4500a0;
           }
         `}
       </style>
@@ -131,13 +142,17 @@ function Signup() {
             required
           />
 
-          {/* reCAPTCHA v2 Widget */}
           <ReCAPTCHA
-            sitekey="6LenBvMqAAAAALN-DNzfq-TpKfRSru9kv4xuFIHg" // Replace with your actual reCAPTCHA site key
+            sitekey="6LenBvMqAAAAALN-DNzfq-TpKfRSru9kv4xuFIHg"
             onChange={(token) => setCaptchaToken(token)}
           />
 
           <button type="submit">Signup</button>
+
+          {/* Redirect link for existing users */}
+          <p className="redirect-link" onClick={() => navigate("/login")}>
+            Already have an account? Login here
+          </p>
         </form>
       </div>
     </>
