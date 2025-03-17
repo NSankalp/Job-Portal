@@ -18,7 +18,7 @@ const PORT = 3000;
 
 // Middleware
 app.use(cors({
-  origin:"job-portal-sigma-six.vercel.app",
+  origin:"https://job-portal-sigma-six.vercel.app",
   methods:["GET","POST","PUT","DELETE"],
   credentials: true,
 }));
