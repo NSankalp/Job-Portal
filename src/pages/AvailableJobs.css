@@ -1,0 +1,181 @@
+/* Main container */
+.available-jobs {
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  color: black; /* Default text color */
+}
+
+/* Page title */
+.page-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #333; /* Dark color for the title */
+  margin-bottom: 40px; /* Extra space for emphasis */
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Adds space between letters */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle text shadow for better readability */
+}
+
+/* Filters Section */
+.filters-container {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Job Cards Container */
+.job-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Increased gap for better spacing */
+  padding: 0 20px;
+}
+
+/* Individual job card styles */
+.job-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px; /* Slightly more rounded corners */
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Deeper shadow for more emphasis */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.job-card:hover {
+  transform: translateY(-10px); /* More pronounced lift on hover */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Stronger shadow for hover effect */
+}
+
+/* Job card text styling */
+.job-card h3 {
+  font-size: 26px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.job-card p {
+  font-size: 16px;
+  color: black;
+  margin-bottom: 10px;
+  line-height: 1.5; /* Improved line spacing for readability */
+}
+
+.job-card .salary {
+  font-size: 20px;
+  color: #007bff; /* Accent color for salary */
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* Buttons inside job cards */
+.job-card button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  align-self: flex-start;
+}
+
+.job-card button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slight scale effect for better interaction */
+}
+
+.job-card button:focus {
+  outline: none; /* Remove focus outline */
+}
+
+/* Pagination styles */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.pagination-container button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0 15px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-container button:hover {
+  background-color: #0056b3;
+}
+
+.pagination-container button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination-container span {
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+
+/* Medium screens (Tablets and up) */
+@media screen and (max-width: 1024px) {
+  .job-cards-container {
+    padding: 0 15px;
+  }
+}
+
+/* Small screens (Mobile) */
+@media screen and (max-width: 600px) {
+  .available-jobs {
+    padding: 15px;
+  }
+
+  .page-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .job-cards-container {
+    padding: 0 10px;
+  }
+
+  .job-card {
+    padding: 20px; /* Adjust card padding for mobile */
+  }
+
+  .job-card h3 {
+    font-size: 20px;
+  }
+
+  .pagination-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pagination-container button {
+    margin: 10px 0; /* Stack pagination buttons */
+  }
+
+  
+}
+
+
+

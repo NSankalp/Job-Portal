@@ -1,0 +1,105 @@
+.job-details {
+  padding: 40px;
+  max-width: 900px;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* Job Title */
+.job-details h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #1e3a8a;
+  padding-bottom: 10px;
+}
+
+/* Job Information */
+.job-details p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/* Strong Text */
+.job-details strong {
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+/* Qualifications Section - Same as company, location, salary, description */
+.job-details h3,
+.job-details h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e3a8a;  /* Blue for the title */
+  margin-top: 30px;
+}
+
+.job-details p.qualifications,
+.job-details p.company-info {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/* Lists under Qualifications and About the Company */
+.job-details ul {
+  margin-bottom: 20px;
+}
+
+.job-details ul li {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #000;  /* Black color for list items */
+}
+
+/* Apply Button */
+.job-details button {
+  padding: 14px 24px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+  display: block;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.job-details button:hover {
+  background-color: #45a049;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .job-details {
+    padding: 30px;
+  }
+
+  .job-details h2 {
+    font-size: 16px;
+  }
+
+  .job-details p {
+    font-size: 16px;
+  }
+
+  .job-details h3, .job-details h4 {
+    font-size: 16px;
+  }
+
+  .job-details button {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+}

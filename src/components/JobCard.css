@@ -1,0 +1,44 @@
+.job-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative; /* Ensure child elements can be absolutely positioned */
+}
+
+.job-card-buttons {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  gap: 10px; /* Add spacing between buttons */
+  position: absolute; /* Position buttons independently */
+  right: 10px; /* Distance from the right edge of the card */
+  top: 80px; /* Move buttons upward to the desired position */
+}
+
+.apply-button,
+.view-details-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.apply-button {
+  background-color: #28a745; /* Green for Apply */
+  color: white;
+}
+
+.apply-button:hover {
+  background-color: #218838;
+}
+
+.view-details-button {
+  background-color: #007bff; /* Blue for View Details */
+  color: white;
+}
+
+.view-details-button:hover {
+  background-color: #0056b3;
+}

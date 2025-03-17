@@ -1,0 +1,97 @@
+/* Updated App.css */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4ff;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  box-shadow: none; /* Optional, remove shadow */
+}
+
+.left-section {
+  flex: 1;
+  background-color: #d8eaff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recruitment-image {
+  width: 80%;
+  max-width: 400px;
+}
+
+.right-section {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.signin-text {
+  text-align: right;
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+
+.signin-link {
+  color: #7d00ff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #7d00ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #5a00c7;
+}
