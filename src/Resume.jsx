@@ -36,7 +36,7 @@ const App = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/upload",
+        `${import.meta.env.VITE_API_BASE_URL}/upload`,
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },

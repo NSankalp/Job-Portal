@@ -31,15 +31,18 @@ function Login() {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/api/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          username: formData.username,
-          password: formData.password,
-          captchaToken, // Add captchaToken to the request body
-        }),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_API_BASE_URL}/api/auth/login`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            username: formData.username,
+            password: formData.password,
+            captchaToken, // Add captchaToken to the request body
+          }),
+        }
+      );
 
       const data = await response.json();
 

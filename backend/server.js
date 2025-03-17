@@ -17,7 +17,11 @@ const app = express();
 const PORT = 3000;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin:"job-portal-sigma-six.vercel.app",
+  methods:["GET","POST","PUT","DELETE"],
+  credentials: true,
+}));
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 app.use(express.static(path.join(__dirname, '../dist')));

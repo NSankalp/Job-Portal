@@ -19,18 +19,21 @@ function Signup() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch("http://localhost:3000/api/auth/Signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          username: formData.name,
-          password: formData.password,
-          email: formData.email,
-          captchaToken, //send captcha token
-        }),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_API_BASE_URL}/api/auth/Signup`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            username: formData.name,
+            password: formData.password,
+            email: formData.email,
+            captchaToken, //send captcha token
+          }),
+        }
+      );
 
       let data;
       if (response.headers.get("content-type")?.includes("application/json")) {

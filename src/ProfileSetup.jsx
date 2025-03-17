@@ -84,10 +84,13 @@ const ProfileSetup = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/api/auth/profile", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_API_BASE_URL}/api/auth/profile`,
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       const responseData = await response.json();
       console.log("Server response:", responseData);

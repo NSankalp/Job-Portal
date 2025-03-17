@@ -19,7 +19,7 @@ const AvailableJobs = () => {
     const fetchJobs = async () => {
       try {
         const response = await fetch(
-          "http://localhost:3000/api/jobs/available-jobs"
+          `${import.meta.env.VITE_API_BASE_URL}/api/jobs/available-jobs`
         );
 
         const data = await response.json();
@@ -61,16 +61,19 @@ const AvailableJobs = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/api/jobs/apply", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          username,
-          jobId: job._id,
-          jobTitle: job.title,
-          company: job.company,
-        }),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_API_BASE_URL}/api/jobs/apply`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            username,
+            jobId: job._id,
+            jobTitle: job.title,
+            company: job.company,
+          }),
+        }
+      );
 
       const data = await response.json();
       if (response.ok) {

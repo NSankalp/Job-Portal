@@ -8,7 +8,7 @@ const Leaderboard = () => {
     const fetchLeaderboard = async () => {
       try {
         const response = await fetch(
-          "http://localhost:3000/api/auth/leaderboard"
+          `${import.meta.env.VITE_API_BASE_URL}/api/auth/leaderboard`
         );
         if (response.ok) {
           const data = await response.json();
