@@ -50,7 +50,7 @@ const AvailableJobs = () => {
   const currentJobs = filteredJobs.slice(indexOfFirstJob, indexOfLastJob);
 
   const handleViewDetails = (job) => {
-    navigate(`/job/${job._id}`);
+    navigate(`/job/${job.id}`);
   };
 
   const handleApply = async (job) => {
@@ -68,7 +68,7 @@ const AvailableJobs = () => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             username,
-            jobId: job._id,
+            jobId: job.id,
             jobTitle: job.title,
             company: job.company,
           }),
@@ -114,7 +114,7 @@ const AvailableJobs = () => {
       <div className="job-cards-container">
         {currentJobs.map((job) => (
           <JobCard
-            key={job._id}
+            key={job.id}
             job={job}
             onViewDetails={handleViewDetails}
             onApply={handleApply} // Pass the onApply handler
