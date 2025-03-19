@@ -14,7 +14,7 @@ const JobDetails = () => {
     const fetchJobDetails = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3000/api/jobs/available-jobs/${id}`
+          `${import.meta.env.VITE_API_BASE_URL}/api/jobs/available-jobs/${id}`
         );
         if (response.ok) {
           const jobData = await response.json();
