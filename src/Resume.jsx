@@ -72,7 +72,7 @@ const App = () => {
           boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
         }}
       >
-        <h2 style={{ color: "#333" }}>Upload Your Resume for AI Analysis</h2>
+        <h2 style={{ color: "#333" }}>Upload Your Resume for Analysis</h2>
 
         {/* Job Role Selection */}
         <label
